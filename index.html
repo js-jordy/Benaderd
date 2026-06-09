@@ -170,53 +170,64 @@
           <p class="section__intro">Een heldere route van eerste uitnodiging tot waardevolle follow-up. Geen losse campagnes, maar één doorlopend verhaal richting je event.</p>
         </header>
 
-        <ol class="journey__steps">
-          <li class="journey__step">
-            <span class="journey__step-num">01</span>
-            <svg class="journey__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <circle cx="16" cy="10" r="4" stroke="currentColor" stroke-width="1.15"/>
-              <path d="M8 26c0-4.4 3.6-8 8-8s8 3.6 8 8" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
+        <div class="journey__canvas">
+          <div class="journey__path-wrap journey__path-wrap--desktop" aria-hidden="true">
+            <svg class="journey__path-svg" viewBox="0 0 1000 200" preserveAspectRatio="none">
+              <path class="journey__path-track" d="M 40 128 C 120 128, 160 72, 240 68 S 400 132, 480 128 S 640 64, 720 60 S 880 124, 960 118" />
+              <path class="journey__path-draw" d="M 40 128 C 120 128, 160 72, 240 68 S 400 132, 480 128 S 640 64, 720 60 S 880 124, 960 118" />
             </svg>
-            <h3 class="journey__step-title">Doelgroep</h3>
-            <p class="journey__step-text">ICP bepalen en de juiste profielen selecteren.</p>
-          </li>
-          <li class="journey__step">
-            <span class="journey__step-num">02</span>
-            <svg class="journey__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <path d="M6 12l10 7 10-7" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="5" y="8" width="22" height="16" rx="1.5" stroke="currentColor" stroke-width="1.15"/>
+          </div>
+
+          <div class="journey__path-wrap journey__path-wrap--mobile" aria-hidden="true">
+            <svg class="journey__path-svg" viewBox="0 0 200 820" preserveAspectRatio="none">
+              <path class="journey__path-track" d="M 100 24 C 100 100, 52 160, 100 220 S 148 340, 100 400 S 52 520, 100 580 S 148 700, 100 760" />
+              <path class="journey__path-draw" d="M 100 24 C 100 100, 52 160, 100 220 S 148 340, 100 400 S 52 520, 100 580 S 148 700, 100 760" />
             </svg>
-            <h3 class="journey__step-title">Uitnodiging</h3>
-            <p class="journey__step-text">Persoonlijke LinkedIn- en e-mailuitnodigingen.</p>
-          </li>
-          <li class="journey__step">
-            <span class="journey__step-num">03</span>
-            <svg class="journey__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <rect x="7" y="6" width="18" height="20" rx="2" stroke="currentColor" stroke-width="1.15"/>
-              <path d="M11 14h10M11 18h7" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
-            </svg>
-            <h3 class="journey__step-title">Registratie</h3>
-            <p class="journey__step-text">Betrokkenheid vastleggen en verwachtingen helder maken.</p>
-          </li>
-          <li class="journey__step">
-            <span class="journey__step-num">04</span>
-            <svg class="journey__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <path d="M8 16l5 5 11-11" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="16" cy="16" r="11" stroke="currentColor" stroke-width="1.15"/>
-            </svg>
-            <h3 class="journey__step-title">Aanwezigheid</h3>
-            <p class="journey__step-text">Reminders en no-show reductie tot op de dag zelf.</p>
-          </li>
-          <li class="journey__step">
-            <span class="journey__step-num">05</span>
-            <svg class="journey__icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <path d="M8 12c0 0 2.5-3 8-3s8 3 8 3v8c0 0-2.5 3-8 3s-8-3-8-3v-8z" stroke="currentColor" stroke-width="1.15"/>
-              <path d="M12 16h8" stroke="currentColor" stroke-width="1.15" stroke-linecap="round"/>
-            </svg>
-            <h3 class="journey__step-title">Follow-up</h3>
-            <p class="journey__step-text">Post-event opvolging voor blijvende relaties.</p>
-          </li>
-        </ol>
+          </div>
+
+          <ol class="journey__milestones">
+            <li class="journey__milestone journey__milestone--above" style="--journey-i: 0">
+              <div class="journey__content">
+                <span class="journey__num">01</span>
+                <h3 class="journey__step-title">Doelgroep</h3>
+                <p class="journey__step-text">ICP bepalen en de juiste profielen selecteren.</p>
+              </div>
+              <span class="journey__node"></span>
+            </li>
+            <li class="journey__milestone journey__milestone--below" style="--journey-i: 1">
+              <div class="journey__content">
+                <span class="journey__num">02</span>
+                <h3 class="journey__step-title">Uitnodiging</h3>
+                <p class="journey__step-text">Persoonlijke LinkedIn- en e-mailuitnodigingen.</p>
+              </div>
+              <span class="journey__node"></span>
+            </li>
+            <li class="journey__milestone journey__milestone--above" style="--journey-i: 2">
+              <div class="journey__content">
+                <span class="journey__num">03</span>
+                <h3 class="journey__step-title">Registratie</h3>
+                <p class="journey__step-text">Betrokkenheid vastleggen en verwachtingen helder maken.</p>
+              </div>
+              <span class="journey__node"></span>
+            </li>
+            <li class="journey__milestone journey__milestone--below" style="--journey-i: 3">
+              <div class="journey__content">
+                <span class="journey__num">04</span>
+                <h3 class="journey__step-title">Aanwezigheid</h3>
+                <p class="journey__step-text">Reminders en no-show reductie tot op de dag zelf.</p>
+              </div>
+              <span class="journey__node"></span>
+            </li>
+            <li class="journey__milestone journey__milestone--above" style="--journey-i: 4">
+              <div class="journey__content">
+                <span class="journey__num">05</span>
+                <h3 class="journey__step-title">Follow-up</h3>
+                <p class="journey__step-text">Post-event opvolging voor blijvende relaties.</p>
+              </div>
+              <span class="journey__node"></span>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
 
