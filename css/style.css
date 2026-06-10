@@ -213,6 +213,9 @@ em {
 }
 
 .site-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
   font-family: var(--font-serif);
   font-size: 1.5rem;
   font-weight: 600;
@@ -220,8 +223,26 @@ em {
   letter-spacing: -0.02em;
 }
 
+.site-logo__icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  color: var(--color-bronze);
+}
+
 .site-logo__mark {
   color: var(--color-bronze);
+}
+
+.logo img {
+  display: block;
+  height: 42px;
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.logo:hover img {
+  opacity: 0.82;
 }
 
 .nav-toggle {
@@ -1145,10 +1166,20 @@ em {
 }
 
 .site-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
   font-family: var(--font-serif);
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--color-off-white);
+}
+
+.site-footer__logo-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  color: var(--color-bronze-light);
 }
 
 .site-footer__tagline {
