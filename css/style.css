@@ -798,6 +798,10 @@ em {
    Event Pipeline Sprint
    ========================================================================== */
 
+.sprint {
+  padding-block: clamp(5rem, 10vw, 8rem);
+}
+
 .sprint__inner {
   display: grid;
   gap: clamp(2.5rem, 5vw, 4rem);
@@ -852,6 +856,8 @@ em {
   justify-content: center;
   width: 100%;
   overflow: visible;
+  align-items: center;
+  padding-block: 4rem;
 }
 
 .sprint__orbit {
@@ -934,8 +940,8 @@ em {
   position: absolute;
   left: 50%;
   top: 50%;
-  --orbit-radius: 42%;
-  --copy-distance: clamp(4.25rem, 9vw, 5.75rem);
+  --orbit-radius: 14.28rem;
+  --copy-distance: clamp(5.5rem, 11vw, 7.5rem);
   opacity: 0;
   transform: rotate(var(--orbit-angle)) translateY(calc(-1 * var(--orbit-radius))) rotate(calc(-1 * var(--orbit-angle))) translate(-50%, -50%);
   transition:
@@ -944,11 +950,11 @@ em {
   transition-delay: calc(0.15s + var(--step-i, 0) * 0.1s);
 }
 
-.sprint__orbit-step--01 { --step-i: 0; }
-.sprint__orbit-step--02 { --step-i: 1; }
-.sprint__orbit-step--03 { --step-i: 2; }
-.sprint__orbit-step--04 { --step-i: 3; }
-.sprint__orbit-step--05 { --step-i: 4; }
+.sprint__orbit-step--01 { --step-i: 0; --copy-distance: 3.5rem; }
+.sprint__orbit-step--02 { --step-i: 1; --copy-distance: 6.5rem; }
+.sprint__orbit-step--03 { --step-i: 2; --copy-distance: 4rem; }
+.sprint__orbit-step--04 { --step-i: 3; --copy-distance: 4rem; }
+.sprint__orbit-step--05 { --step-i: 4; --copy-distance: 6.5rem; }
 
 .sprint.is-visible .sprint__orbit-step {
   opacity: 1;
@@ -1060,6 +1066,7 @@ em {
   }
 
   .sprint__orbit-step {
+    --orbit-radius: 10.08rem;
     --copy-distance: clamp(3.75rem, 16vw, 5rem);
   }
 
