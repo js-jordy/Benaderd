@@ -546,6 +546,7 @@ em {
   padding-block: clamp(1rem, 3vw, 2rem);
 }
 
+/*
 .journey__path-wrap {
   position: absolute;
   inset: 0;
@@ -583,6 +584,24 @@ em {
 
 .journey.is-visible .journey__path-draw {
   stroke-dashoffset: 0;
+}
+*/
+
+.journey__route-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.journey__route-svg path {
+  fill: none;
+  stroke: #b8975a;
+  stroke-width: 1.5;
 }
 
 .journey__milestones {
@@ -641,12 +660,15 @@ em {
 }
 
 .journey__node {
+  display: inline-block;
+  vertical-align: top;
   position: relative;
   z-index: 2;
   flex-shrink: 0;
   width: 0.5rem;
   height: 0.5rem;
-  margin: 0.4rem 0;
+  margin: 0;
+  padding: 0;
   border-radius: 50%;
   background-color: var(--color-bronze);
   box-shadow: 0 0 0 5px var(--color-off-white);
@@ -747,15 +769,19 @@ em {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  /*
   .journey__path-draw,
+  */
   .journey__milestone,
   .journey__node {
     transition: none;
   }
 
+  /*
   .journey__path-draw {
     stroke-dashoffset: 0;
   }
+  */
 
   .journey__milestone {
     opacity: 1;
