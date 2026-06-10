@@ -29,12 +29,36 @@
   }
 
   const journey = document.getElementById('invitation-journey');
+  const sprint = document.getElementById('pipeline-sprint');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (sprint) {
+    function revealSprint() {
+      sprint.classList.add('is-visible');
+    }
+
+    if (reducedMotion) {
+      revealSprint();
+    } else {
+      const sprintObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              revealSprint();
+              sprintObserver.unobserve(sprint);
+            }
+          });
+        },
+        { threshold: 0.2, rootMargin: '0px 0px -6% 0px' }
+      );
+
+      sprintObserver.observe(sprint);
+    }
+  }
 
   if (!journey) {
     return;
   }
-
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const journeyContainer = journey.querySelector('.journey__canvas');
   const routeSvg = journey.querySelector('.journey__route-svg');
   const routePath = journey.querySelector('.journey__route-svg path');
