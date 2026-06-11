@@ -236,13 +236,15 @@ em {
 
 .logo img {
   display: block;
-  height: 42px;
+  height: 56px;
   width: auto;
+  opacity: 1;
+  transform: translateY(1px);
   transition: opacity 0.2s ease;
 }
 
 .logo:hover img {
-  opacity: 0.82;
+  opacity: 1;
 }
 
 .nav-toggle {
