@@ -63,7 +63,6 @@
   const routeSvg = journey.querySelector('.journey__route-svg');
   const routePath = journey.querySelector('.journey__route-svg path');
   const dots = Array.from(journey.querySelectorAll('[data-journey-anchor]'));
-  const CONTROL_OFFSET = 20;
   let resizeTimer;
 
   function getDotPoints() {
@@ -75,9 +74,13 @@
 
     return dots.map(function (dot) {
       const rect = dot.getBoundingClientRect();
+      const dotWidth = rect.width;
+      const dotHeight = rect.height;
+      const milestone = dot.closest('.journey__milestone');
+      const isBelow = milestone && milestone.classList.contains('journey__milestone--below');
       return {
-        x: rect.left + rect.width / 2 - containerRect.left,
-        y: rect.top + rect.height / 2 - containerRect.top - 6,
+        x: rect.left - containerRect.left + dotWidth / 2,
+        y: rect.top - containerRect.top + dotHeight / 2 - 8 + (isBelow ? -12 : 0),
       };
     });
   }
