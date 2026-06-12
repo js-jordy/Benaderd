@@ -1108,6 +1108,20 @@ em {
   pointer-events: none;
 }
 
+@keyframes orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.sprint.is-visible .sprint__orbit-svg {
+  animation: orbit-spin 90s linear infinite;
+  transform-origin: center;
+}
+
+.sprint__orbit:hover .sprint__orbit-svg {
+  animation-play-state: paused;
+}
+
 .sprint__orbit-ring {
   fill: none;
   stroke: rgba(183, 154, 90, 0.28);
@@ -1226,6 +1240,14 @@ em {
     0 0 1.5rem rgba(183, 154, 90, 0.22);
 }
 
+.sprint__orbit-step:hover .sprint__orbit-node {
+  border-color: rgba(201, 176, 122, 0.9);
+  box-shadow:
+    0 0 0 1px rgba(183, 154, 90, 0.3),
+    0 0 1.25rem rgba(183, 154, 90, 0.3);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 .sprint__orbit-copy {
   position: absolute;
   left: 50%;
@@ -1324,6 +1346,10 @@ em {
 
   .sprint__orbit-core {
     transform: translate(-50%, -50%);
+  }
+
+  .sprint__orbit-svg {
+    animation: none;
   }
 }
 
