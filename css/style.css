@@ -500,6 +500,10 @@ em {
   background-color: var(--color-neutral-warm);
 }
 
+#proof {
+  padding-top: clamp(3rem, 6vw, 5rem);
+}
+
 .proof .section__header {
   max-width: 44rem;
   margin-bottom: clamp(2.75rem, 5.5vw, 3.75rem);
@@ -1034,6 +1038,10 @@ em {
   padding-block: clamp(5rem, 10vw, 8rem);
 }
 
+#pipeline-sprint {
+  border-top: 1px solid rgba(183, 154, 90, 0.22);
+}
+
 .sprint__inner {
   display: grid;
   gap: clamp(2.5rem, 5vw, 4rem);
@@ -1392,6 +1400,7 @@ em {
 .site-footer {
   background-color: var(--color-olive-dark);
   color: rgba(242, 239, 231, 0.85);
+  border-top: 1px solid rgba(183, 154, 90, 0.22);
 }
 
 .site-footer__inner {
