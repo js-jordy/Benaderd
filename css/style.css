@@ -320,7 +320,7 @@ em {
    ========================================================================== */
 
 .hero {
-  padding-block: clamp(2.5rem, 6vw, 4rem) clamp(3rem, 7vw, 5rem);
+  padding-block: clamp(2.5rem, 6vw, 4rem) clamp(2rem, 4vw, 3rem);
   background-color: var(--color-off-white);
   overflow-x: hidden;
 }
@@ -411,7 +411,7 @@ em {
   border-radius: 999px 999px 6px 6px;
   background-color: var(--color-off-white);
   aspect-ratio: 4 / 5;
-  max-height: clamp(22rem, 55vh, 34rem);
+  max-height: clamp(20rem, 48vh, 30rem);
   margin-inline: auto;
   max-width: 28rem;
   box-shadow: 0 4px 18px rgba(37, 42, 34, 0.04);
@@ -500,7 +500,7 @@ em {
   background-color: var(--color-neutral-warm);
 }
 
-#proof {
+#problem {
   padding-top: clamp(3rem, 6vw, 5rem);
 }
 
@@ -554,8 +554,13 @@ em {
    ========================================================================== */
 
 .problem__inner {
-  display: grid;
-  gap: clamp(2rem, 4vw, 3rem);
+  display: block;
+}
+
+.problem__content {
+  max-width: 44rem;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .problem__lead {
@@ -577,6 +582,7 @@ em {
   padding: clamp(1.5rem, 3vw, 2rem);
   background-color: var(--color-neutral-warm);
   border-radius: var(--radius-sm);
+  border: 1px solid rgba(47, 53, 43, 0.09);
   border-left: 3px solid var(--color-bronze);
 }
 
@@ -1039,6 +1045,7 @@ em {
 }
 
 #pipeline-sprint {
+  padding-top: clamp(4rem, 7vw, 6rem);
   border-top: 1px solid rgba(183, 154, 90, 0.22);
 }
 
@@ -1498,6 +1505,7 @@ em {
   .hero__inner {
     grid-template-columns: 1fr 1fr;
     gap: clamp(2rem, 4vw, 3.5rem);
+    align-items: start;
   }
 
   .hero__actions {
@@ -1517,11 +1525,6 @@ em {
 
   .proof__grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .problem__inner {
-    grid-template-columns: 1.4fr 1fr;
-    align-items: start;
   }
 
   .sprint__inner {
